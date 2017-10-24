@@ -1,3 +1,30 @@
 #goodFortune, #mehFortune, #badFortune {
   display: none;
 }
+
+.jumbotron {
+  background-color: #735293;
+  color: #BD5E5E;
+  text-align: center;
+}
+
+body {
+  font-family: 'Kaushan Script', cursive;
+}
+
+p {
+  text-align: center;
+}
+
+.form-group {
+  font-size: 30px;
+}
+
+.user-fortune {
+  font-size: 30px;
+  text-align: center;
+}
+
+img {
+  display: inline-block;
+}
