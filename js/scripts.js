@@ -1,15 +1,26 @@
 $(document).ready(function(){
   $("form#fortuneSurvey").submit(function(event){
     event.preventDefault();
-    $("input:checkbox[name=luck]:checked").each(function() {
-      var omenVal = $(this).val();
-      var omenArray = [];
-      omenArray.push(omenVal);
-      for (var index = 0; i < omenArray.length; index++) {
-        if 
-      }
+    var goodOmen = [];
+    var badOmen = [];
+    $("input:checkbox[name=good]:checked").each(function() {
+      var goodVal = $(this).val();
+      goodOmen.push(goodVal);
     });
-
+    $("input:checkbox[name=bad]:checked").each(function() {
+      var badVal = $(this).val();
+      badOmen.push(badVal);
+    });
+    if (goodOmen.length === badOmen.length) {
+      $("#fortuneSurvey").hide();
+      $("#mehFortune").show();
+    } else if (goodOmen.length > badOmen.length) {
+      $("#fortuneSurvey").hide();
+      $("#goodFortune").show();
+    } else {
+      $("#fortuneSurvey").hide();
+      $("#badFortune").show();
+    }
 
   });
 
